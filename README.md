@@ -7,7 +7,7 @@ Find the "Platform" of your router on the openwrt. https://wiki.openwrt.org/toh/
 You will also need to know if your openwrt router run an LEDE version or not.
 
 ### Step 2
-Follow those steps if your router is **not on a LEDE firmware**. https://wiki.openwrt.org/doc/howto/cups.server
+Follow those steps if your router is **not on a LEDE firmware** or go to step 3. https://wiki.openwrt.org/doc/howto/cups.server
 
 If your router run an **LEDE** firmware follow these steps to compile the cups package. For these steps you must have a Linux computer. 
 
@@ -49,6 +49,10 @@ you will find this package here:
 ### Step 3
 install the packages with:
 
+if your router doen't run an LEDE version just run: 
+*opkg install cups*
+
+If you got the compiled version of cups (LEDE) run this:
 *opkg install* **package.ipk**
 
 You can install multiple packages at the same time.
