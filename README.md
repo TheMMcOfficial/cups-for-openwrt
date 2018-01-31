@@ -4,6 +4,8 @@ If you want to install cups on your openwrt/openwrt-LEDE router to share a usb p
 ### Step 1
 Find the "Platform" of your router on the openwrt. https://wiki.openwrt.org/toh/start
 
+You will also need to know if your openwrt router run an LEDE version or not.
+
 ### Step 2
 Follow those steps if your router is **not on a LEDE firmware**. https://wiki.openwrt.org/doc/howto/cups.server
 
