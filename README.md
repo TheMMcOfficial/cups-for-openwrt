@@ -65,6 +65,9 @@ Configure the printer in cups.
 
 Go to http://192.168.0.1:631
 
+Add your printer. If your printer is plug via USB you should see it on the screen. If your printer is a network printer you will have to configure it manualy. You will choose the prococol compatible with your printer. Personaly I have configure mine with the socket protocol.
+
+**Note the printer name and description of the printer because you will need it for configuring airprint**
 
 ### Step 6
 Configure airprint!
