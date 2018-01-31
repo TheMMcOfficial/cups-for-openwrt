@@ -199,9 +199,13 @@ restart cups
 
 sources: 
 https://wiki.openwrt.org/doc/howto/cups.server
+
 http://mattie47.com/getting-cups-working-on-openwrt/
+
 https://github.com/Gr4ffy/lede-cups
+
 http://openrouter.info/forum/viewtopic.php?f=22&t=1856
+
 https://forum.lede-project.org/t/compile-lede-with-error/2195/3
 
 
