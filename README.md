@@ -28,7 +28,8 @@ cd scripts
 ```
 
 **make sure to have all the dependencies install to compile the package**
-```./feeds install -a
+```
+./feeds install -a
 
 make menuconfig
 ```
