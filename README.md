@@ -13,7 +13,7 @@ If you're lucky maybe the cups package is already build for your platform here: 
 
 Do the following steps on the computer to compile the packages.
 
-*git clone https://github.com/lede-project/source
+*git clone https://github.com/lede-project/source*
 
 cd source
 
