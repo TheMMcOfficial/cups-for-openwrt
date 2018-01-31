@@ -54,6 +54,8 @@ You can install multiple packages at the same time.
 ### Step 4
 Configure cups.
 
+*chmod 700 /usr/lib/cups/backend/usb*
+
 Change the config of cups to be able to modify things over your network!
 
 *vi /etc/cups/cupsd.conf*
