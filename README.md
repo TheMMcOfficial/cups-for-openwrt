@@ -50,9 +50,12 @@ you will find this package here:
 install the packages with:
 
 if your router doen't run an LEDE version just run: 
+
 *opkg install cups*
 
+
 If you got the compiled version of cups (LEDE) run this:
+
 *opkg install* **package.ipk**
 
 You can install multiple packages at the same time.
