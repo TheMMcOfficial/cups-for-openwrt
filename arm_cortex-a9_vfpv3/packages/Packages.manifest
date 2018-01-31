@@ -1,0 +1,29 @@
+Package: libjpeg
+Version: 9a-1
+Depends: libc
+Source: feeds/packages/libs/libjpeg
+License: IJG
+LicenseFiles: README
+Section: libs
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: arm_cortex-a9_vfpv3
+Installed-Size: 92488
+Filename: libjpeg_9a-1_arm_cortex-a9_vfpv3.ipk
+Size: 93193
+SHA256sum: 19f6b2baea3fe4c461b09338e13e438a59a3d4d275150c0c6e1374defab00b19
+Description:  The Independent JPEG Group's JPEG runtime library
+
+Package: libpng
+Version: 1.6.34-1
+Depends: libc, zlib
+Source: feeds/packages/libs/libpng
+License: Libpng GPL-2.0+ BSD-3-Clause
+Section: libs
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: arm_cortex-a9_vfpv3
+Installed-Size: 81301
+Filename: libpng_1.6.34-1_arm_cortex-a9_vfpv3.ipk
+Size: 82085
+SHA256sum: 75beb0f8accda167cb8abf6c6ecf112ae3e1cb94ec4252e51204ed8cc6a0ba7b
+Description:  A PNG format files handling library
+

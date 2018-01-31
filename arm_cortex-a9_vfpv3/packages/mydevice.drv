@@ -1,0 +1,5 @@
+// CUPS PPD Compiler CUPS v2.2.6
+
+// Include necessary files...
+#include <font.defs>
+#include <media.defs>
