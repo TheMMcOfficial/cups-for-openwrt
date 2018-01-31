@@ -27,7 +27,7 @@ Do the following steps on the computer to compile the packages.
 
 *./feeds install -a*
 
-*make menuconfig* (set Network->Printing->cups as "M" and set the target to your router "Platform")
+*make menuconfig* **(set Network->Printing->cups as "M" and set the target to your router "Platform")**
 
 *make*
 
