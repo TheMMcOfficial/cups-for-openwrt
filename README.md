@@ -29,9 +29,14 @@ Do the following steps on the computer to compile the packages.
 
 *./feeds install -a*
 
-*make menuconfig* **(set Network->Printing->cups as "M" and set the target to your router "Platform")**
+*make menuconfig* **(set the target system to your router "Platform" and set Network->Printing->cups as "M")**
 
 *make*
+
+If you try to compile with the root user you will get errors. To be able to compile you have to type those commands:
+
+**
+*export*
 
 copy the following packages on the router with the scp command: 
 
