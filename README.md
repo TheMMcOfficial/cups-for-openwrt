@@ -16,29 +16,32 @@ If you're lucky maybe the cups package is already build for your platform here: 
 Do the following steps on the computer to compile the packages.
 
 ```
-*git clone https://github.com/lede-project/source*
+git clone https://github.com/lede-project/source
 
-*cd source*
+cd source
 
-*echo "src-git cups https://github.com/Gr4ffy/lede-cups.git" >> feeds.conf.default*
+echo "src-git cups https://github.com/Gr4ffy/lede-cups.git" >> feeds.conf.default
 
-*cd scripts*
+cd scripts
 
-*./feeds update -a*
+./feeds update -a
 ```
 
 **make sure to have all the dependencies install to compile the package**
+```./feeds install -a
+
+make menuconfig
 ```
-*./feeds install -a*
 
-*make menuconfig* **(set the target system to your router "Platform" and set Network->Printing->cups as "M")**
+**(set the target system to your router "Platform" and set Network->Printing->cups as "M")**
 
-*make*
+```
+make
 ```
 
 **If you try to compile with the root user you will get errors. To be able to compile you have to type this command:**
 ```
-*export FORCE_UNSAFE_CONFIGURE=1*
+export FORCE_UNSAFE_CONFIGURE=1
 ```
 copy the following packages on the router with the scp command: 
 
@@ -59,7 +62,7 @@ libpng_1.6.34-1_arm_cortex-a9_vfpv3.ipk
 
 you can also update the libjpg if you want
 
-```*scp Package root@192.168.0.1:/DESTINATION/PACKAGENAME*```
+```scp Package root@192.168.0.1:/DESTINATION/PACKAGENAME```
 
 **If your router's ip is not 192.168.0.1 change it!**
 **if you got an usb device mount on your router, upload the package on the usb device**
@@ -69,23 +72,23 @@ install the packages with:
 
 if your router doen't run an LEDE version just run: 
 
-```*opkg install cups*```
+```opkg install cups```
 
 
 If you got the compiled version of cups (LEDE) run this:
 
-```*opkg install* **package.ipk**```
+```opkg install **package.ipk**```
 
 You can install multiple packages at the same time.
 
 ### Step 4
 Configure cups.
 
-```*chmod 700 /usr/lib/cups/backend/usb*```
+```chmod 700 /usr/lib/cups/backend/usb```
 
 Change the config of cups to be able to modify the config of cups over your network!
 
-```*vi /etc/cups/cupsd.conf*```
+```vi /etc/cups/cupsd.conf```
 
 ```
 change
@@ -120,39 +123,39 @@ Configure airprint!
 
 create the following file
 
-```*vi /etc/avahi/services/AirPrint-YOUR_PRINTER.service*```
+```vi /etc/avahi/services/AirPrint-YOUR_PRINTER.service```
 
 And paste this. Replace all the "YOUR_PRINTER" by the name gave in the cups configuration. 
 
 ```
-*<?xml version='1.0' encoding='UTF-8'?>*
-*<!DOCTYPE service-group SYSTEM "avahi-service.dtd">*
-*<service-group>*
-  *<name replace-wildcards="yes">AirPrint YOUR_PRINTER @ %h</name>*
- * <service>*
- *   <type>_ipp._tcp</type>*
-  *  <subtype>_universal._sub._ipp._tcp</subtype>*
- *   <port>631</port>*
-*    <txt-record>txtvers=1</txt-record>*
-*    <txt-record>qtotal=1</txt-record>*
-*    <txt-record>Transparent=T</txt-record>*
-*    <txt-record>URF=none</txt-record>*
-*    <txt-record>rp=printers/YOUR_PRINTER</txt-record>*
-*    <txt-record>note=YOUR_PRINTER</txt-record>*
-*    <txt-record>printer-state=3</txt-record>*
-*    <txt-record>printer-type=0x821054</txt-record>*
-*    <txt-record>pdl=application/octet-stream,application/pdf,application/postscript,image/gif,image/jpeg*
-*</service>*
-*</service-group>*
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<service-group>
+  <name replace-wildcards="yes">AirPrint YOUR_PRINTER @ %h</name>
+  <service>
+    <type>_ipp._tcp</type>
+    <subtype>_universal._sub._ipp._tcp</subtype>
+    <port>631</port>
+    <txt-record>txtvers=1</txt-record>
+    <txt-record>qtotal=1</txt-record>
+    <txt-record>Transparent=T</txt-record>
+    <txt-record>URF=none</txt-record>
+    <txt-record>rp=printers/YOUR_PRINTER</txt-record>
+    <txt-record>note=YOUR_PRINTER</txt-record>
+    <txt-record>printer-state=3</txt-record>
+    <txt-record>printer-type=0x821054</txt-record>
+    <txt-record>pdl=application/octet-stream,application/pdf,application/postscript,image/gif,image/jpeg
+</service>
+</service-group>
 ```
 
 
 I don't know if the last two file are required but I have create them.
 
-```*vi /usr/share/cups/mime/airprint.convs *```
+```vi /usr/share/cups/mime/airprint.convs ```
 
 ```
-*more airprint.convs
+more airprint.convs
 #
 # "$Id: $"
 #
@@ -161,21 +164,21 @@ I don't know if the last two file are required but I have create them.
 image/urf application/pdf 100 pdftoraster
 #
 # End of "$Id: $".
-#*
+#
 ```
 
-```*/usr/share/cups/mime/airprint.types*```
+```/usr/share/cups/mime/airprint.types```
 
 ```
-*irprint.types*
-*#*
-*# "$Id: $"*
-*#*
-*# AirPrint type
+irprint.types
+#
+# "$Id: $"
+#
+# AirPrint type
 image/urf urf string(0,UNIRAST<00>)
 #
 # End of "$Id: $".
-#*
+#
 ```
 
 ### Optional step
