@@ -15,21 +15,21 @@ Do the following steps on the computer to compile the packages.
 
 *git clone https://github.com/lede-project/source*
 
-cd source
+*cd source*
 
-echo "src-git cups https://github.com/Gr4ffy/lede-cups.git" >> feeds.conf.default
+*echo "src-git cups https://github.com/Gr4ffy/lede-cups.git" >> feeds.conf.default*
 
-cd scripts
+*cd scripts*
 
-./feeds update -a*
+*./feeds update -a*
 
 **make sure to have all the dependencies install to compile the package**
 
-*./feeds install -a
+*./feeds install -a*
 
-make menuconfig (set Network->Printing->cups as "M" and set the target to your router "Platform")
+*make menuconfig* (set Network->Printing->cups as "M" and set the target to your router "Platform")
 
-make*
+*make*
 
 copy the following packages on the router with the scp command: 
 
