@@ -35,8 +35,8 @@ Do the following steps on the computer to compile the packages.
 
 **If you try to compile with the root user you will get errors. To be able to compile you have to type those commands:**
 
-**
-*export*
+*set FORCE_UNSAFE_CONFIGURE=1*
+*export FORCE_UNSAFE_CONFIGURE=1*
 
 copy the following packages on the router with the scp command: 
 
