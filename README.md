@@ -170,7 +170,7 @@ image/urf application/pdf 100 pdftoraster
 ```/usr/share/cups/mime/airprint.types```
 
 ```
-irprint.types
+airprint.types
 #
 # "$Id: $"
 #
