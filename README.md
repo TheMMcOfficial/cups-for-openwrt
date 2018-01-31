@@ -33,9 +33,15 @@ Do the following steps on the computer to compile the packages.
 
 copy the following packages on the router with the scp command: 
 
+you will find these packages there:
+
+
+you will find this package here:
+
 
 *scp Package root@192.168.0.1:/DESTINATION*
 
+**If your router's ip is not 192.168.0.1 change it!**
 **if you got an usb device mount on your router, upload the package on the usb device**
 
 ### Step 3
@@ -48,8 +54,15 @@ You can install multiple packages at the same time.
 ### Step 4
 Configure cups.
 
+Change the config of cups to be able to modify things over your network!
+
+*vi /etc/cups/cupsd.conf*
+
 ### Step 5
 Configure the printer in cups.
+
+Go to http://192.168.0.1:631
+
 
 ### Step 6
 Configure airprint!
