@@ -41,9 +41,20 @@ copy the following packages on the router with the scp command:
 
 you will find these packages there:
 
+/source/bin/packages/arm_cortex-a9_vfpv3/cups/
+cups_2.1.4-1_arm_cortex-a9_vfpv3.ipk 
+libcups_2.1.4-1_arm_cortex-a9_vfpv3.ipk 
+libcupscgi_2.1.4-1_arm_cortex-a9_vfpv3.ipk
+libcupsmime_2.1.4-1_arm_cortex-a9_vfpv3.ipk
+libcupsppdc_2.1.4-1_arm_cortex-a9_vfpv3.ipk
+
 
 you will find this package here:
 
+/source/bin/packages/arm_cortex-a9_vfpv3/packages
+libpng_1.6.34-1_arm_cortex-a9_vfpv3.ipk
+
+you can also update the libjpg if you want
 
 *scp Package root@192.168.0.1:/DESTINATION/PACKAGENAME*
 
@@ -73,6 +84,20 @@ Change the config of cups to be able to modify the config of cups over your netw
 
 *vi /etc/cups/cupsd.conf*
 
+change
+User Nobody
+Group Nobody
+
+to:
+User root
+Group root
+
+<Location />
+Order Deny,Allow
+Allow From 127.0.0.1
+Allow From 192.168.0.0/24
+</Location>
+
 ### Step 5
 Configure the printer in cups.
 
@@ -81,8 +106,65 @@ Go to http://192.168.0.1:631
 Add your printer. If your printer is plug via USB you should see it on the screen. 
 If your printer is a network printer you will have to configure it manualy. You will choose the prococol compatible with your printer. Personaly I have configure mine with the socket protocol.
 
+You can search for the ppd of your printer but airprint may have trouble.
+
 **Note the printer name and description of the printer because you will need it for configuring airprint**
 
 ### Step 6
 Configure airprint!
+
+create the following file
+
+*vi /etc/avahi/services/AirPrint-YOUR_PRINTER.service*
+
+And paste this. Replace all the "YOUR_PRINTER" by the name gave in the cups configuration. 
+
+*<?xml version='1.0' encoding='UTF-8'?>*
+*<!DOCTYPE service-group SYSTEM "avahi-service.dtd">*
+*<service-group>*
+  *<name replace-wildcards="yes">AirPrint YOUR_PRINTER @ %h</name>*
+ * <service>*
+ *   <type>_ipp._tcp</type>*
+  *  <subtype>_universal._sub._ipp._tcp</subtype>*
+ *   <port>631</port>*
+*    <txt-record>txtvers=1</txt-record>*
+*    <txt-record>qtotal=1</txt-record>*
+*    <txt-record>Transparent=T</txt-record>*
+*    <txt-record>URF=none</txt-record>*
+*    <txt-record>rp=printers/YOUR_PRINTER</txt-record>*
+*    <txt-record>note=YOUR_PRINTER</txt-record>*
+*    <txt-record>printer-state=3</txt-record>*
+*    <txt-record>printer-type=0x821054</txt-record>*
+*    <txt-record>pdl=application/octet-stream,application/pdf,application/postscript,image/gif,image/jpeg*
+*</service>*
+*</service-group>*
+
+
+I don't know if the last two file are required but I have create them.
+
+*vi /usr/share/cups/mime/airprint.convs *
+
+*more airprint.convs
+#
+# "$Id: $"
+#
+# AirPrint
+# Updated list with minimal set 25 Sept
+image/urf application/pdf 100 pdftoraster
+#
+# End of "$Id: $".
+#*
+
+
+*/usr/share/cups/mime/airprint.types*
+
+*irprint.types*
+*#*
+*# "$Id: $"*
+*#*
+*# AirPrint type
+image/urf urf string(0,UNIRAST<00>)
+#
+# End of "$Id: $".
+#*
 
