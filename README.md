@@ -15,6 +15,7 @@ If you're lucky maybe the cups package is already build for your platform here: 
 
 Do the following steps on the computer to compile the packages.
 
+```
 *git clone https://github.com/lede-project/source*
 
 *cd source*
@@ -24,19 +25,21 @@ Do the following steps on the computer to compile the packages.
 *cd scripts*
 
 *./feeds update -a*
+```
 
 **make sure to have all the dependencies install to compile the package**
-
+```
 *./feeds install -a*
 
 *make menuconfig* **(set the target system to your router "Platform" and set Network->Printing->cups as "M")**
 
 *make*
+```
 
 **If you try to compile with the root user you will get errors. To be able to compile you have to type this command:**
-
+```
 *export FORCE_UNSAFE_CONFIGURE=1*
-
+```
 copy the following packages on the router with the scp command: 
 
 you will find these packages there:
@@ -56,7 +59,7 @@ libpng_1.6.34-1_arm_cortex-a9_vfpv3.ipk
 
 you can also update the libjpg if you want
 
-*scp Package root@192.168.0.1:/DESTINATION/PACKAGENAME*
+```*scp Package root@192.168.0.1:/DESTINATION/PACKAGENAME*```
 
 **If your router's ip is not 192.168.0.1 change it!**
 **if you got an usb device mount on your router, upload the package on the usb device**
@@ -66,24 +69,25 @@ install the packages with:
 
 if your router doen't run an LEDE version just run: 
 
-*opkg install cups*
+```*opkg install cups*```
 
 
 If you got the compiled version of cups (LEDE) run this:
 
-*opkg install* **package.ipk**
+```*opkg install* **package.ipk**```
 
 You can install multiple packages at the same time.
 
 ### Step 4
 Configure cups.
 
-*chmod 700 /usr/lib/cups/backend/usb*
+```*chmod 700 /usr/lib/cups/backend/usb*```
 
 Change the config of cups to be able to modify the config of cups over your network!
 
-*vi /etc/cups/cupsd.conf*
+```*vi /etc/cups/cupsd.conf*```
 
+```
 change
 User Nobody
 Group Nobody
@@ -97,6 +101,7 @@ Order Deny,Allow
 Allow From 127.0.0.1
 Allow From 192.168.0.0/24
 </Location>
+```
 
 ### Step 5
 Configure the printer in cups.
@@ -115,10 +120,11 @@ Configure airprint!
 
 create the following file
 
-*vi /etc/avahi/services/AirPrint-YOUR_PRINTER.service*
+```*vi /etc/avahi/services/AirPrint-YOUR_PRINTER.service*```
 
 And paste this. Replace all the "YOUR_PRINTER" by the name gave in the cups configuration. 
 
+```
 *<?xml version='1.0' encoding='UTF-8'?>*
 *<!DOCTYPE service-group SYSTEM "avahi-service.dtd">*
 *<service-group>*
@@ -138,12 +144,14 @@ And paste this. Replace all the "YOUR_PRINTER" by the name gave in the cups conf
 *    <txt-record>pdl=application/octet-stream,application/pdf,application/postscript,image/gif,image/jpeg*
 *</service>*
 *</service-group>*
+```
 
 
 I don't know if the last two file are required but I have create them.
 
-*vi /usr/share/cups/mime/airprint.convs *
+```*vi /usr/share/cups/mime/airprint.convs *```
 
+```
 *more airprint.convs
 #
 # "$Id: $"
@@ -154,10 +162,11 @@ image/urf application/pdf 100 pdftoraster
 #
 # End of "$Id: $".
 #*
+```
 
+```*/usr/share/cups/mime/airprint.types*```
 
-*/usr/share/cups/mime/airprint.types*
-
+```
 *irprint.types*
 *#*
 *# "$Id: $"*
@@ -166,5 +175,6 @@ image/urf application/pdf 100 pdftoraster
 image/urf urf string(0,UNIRAST<00>)
 #
 # End of "$Id: $".
+```
 #*
 
