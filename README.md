@@ -190,6 +190,7 @@ To put the spool on the usb
 Change the spool config in /etc/cups/cupsd.conf
 
 ```RequestRoot /mnt/shares/cups_spool
+
 TempDir /mnt/shares/cups_spool
 ```
 
