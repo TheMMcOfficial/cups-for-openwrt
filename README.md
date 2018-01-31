@@ -175,6 +175,30 @@ image/urf application/pdf 100 pdftoraster
 image/urf urf string(0,UNIRAST<00>)
 #
 # End of "$Id: $".
-```
 #*
+```
+
+### Optional step
+
+To put the spool on the usb 
+
+```mkdir /mnt/shares/cups_spool```
+
+Change the spool config in /etc/cups/cupsd.conf
+
+```RequestRoot /mnt/shares/cups_spool
+TempDir /mnt/shares/cups_spool
+```
+
+restart cups
+
+```/etc/init.d/cupsd restart ```
+
+sources: 
+https://wiki.openwrt.org/doc/howto/cups.server
+http://mattie47.com/getting-cups-working-on-openwrt/
+https://github.com/Gr4ffy/lede-cups
+http://openrouter.info/forum/viewtopic.php?f=22&t=1856
+https://forum.lede-project.org/t/compile-lede-with-error/2195/3
+
 
