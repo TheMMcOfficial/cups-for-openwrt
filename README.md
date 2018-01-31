@@ -7,7 +7,11 @@ Find the "Platform" of your router on the openwrt. https://wiki.openwrt.org/toh/
 ### Step 2
 Follow those steps if your router is **not on a LEDE firmware**. https://wiki.openwrt.org/doc/howto/cups.server
 
-If your router run an **LEDE** firmware follow these steps to compile the cups package. For these steps you must have a Linux computer. Do the following steps on the computer.
+If your router run an **LEDE** firmware follow these steps to compile the cups package. For these steps you must have a Linux computer. 
+
+If you're lucky maybe the cups package is already build for your platform here: https://wiki.openwrt.org/doc/packages.old
+
+Do the following steps on the computer to compile the packages.
 
 git clone https://github.com/lede-project/source
 
