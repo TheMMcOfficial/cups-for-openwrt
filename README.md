@@ -40,3 +40,12 @@ opkg install **package.ipk**
 
 You can install multiple packages at the same time.
 
+### Step 4
+Configure cups.
+
+### Step 5
+Configure the printer in cups.
+
+### Step 6
+Configure airprint!
+
