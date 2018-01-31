@@ -33,9 +33,7 @@ Do the following steps on the computer to compile the packages.
 
 *make*
 
-**If you try to compile with the root user you will get errors. To be able to compile you have to type those commands:**
-
-*set FORCE_UNSAFE_CONFIGURE=1*
+**If you try to compile with the root user you will get errors. To be able to compile you have to type this command:**
 
 *export FORCE_UNSAFE_CONFIGURE=1*
 
