@@ -33,7 +33,7 @@ Do the following steps on the computer to compile the packages.
 
 *make*
 
-If you try to compile with the root user you will get errors. To be able to compile you have to type those commands:
+**If you try to compile with the root user you will get errors. To be able to compile you have to type those commands:**
 
 **
 *export*
