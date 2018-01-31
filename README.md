@@ -71,7 +71,7 @@ Configure cups.
 
 *chmod 700 /usr/lib/cups/backend/usb*
 
-Change the config of cups to be able to modify things over your network!
+Change the config of cups to be able to modify the config of cups over your network!
 
 *vi /etc/cups/cupsd.conf*
 
