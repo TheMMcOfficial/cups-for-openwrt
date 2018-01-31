@@ -40,7 +40,8 @@ copy the following packages on the router with the scp command:
 
 ### Step 3
 install the packages with:
-*opkg install **package.ipk** *
+
+*opkg install* **package.ipk**
 
 You can install multiple packages at the same time.
 
