@@ -13,7 +13,7 @@ If you're lucky maybe the cups package is already build for your platform here: 
 
 Do the following steps on the computer to compile the packages.
 
-git clone https://github.com/lede-project/source
+*git clone https://github.com/lede-project/source
 
 cd source
 
@@ -21,26 +21,26 @@ echo "src-git cups https://github.com/Gr4ffy/lede-cups.git" >> feeds.conf.defaul
 
 cd scripts
 
-./feeds update -a
+./feeds update -a*
 
 **make sure to have all the dependencies install to compile the package**
 
-./feeds install -a
+*./feeds install -a
 
 make menuconfig (set Network->Printing->cups as "M" and set the target to your router "Platform")
 
-make
+make*
 
 copy the following packages on the router with the scp command: 
 
 
-scp Package root@192.168.0.1:/DESTINATION
+*scp Package root@192.168.0.1:/DESTINATION*
 
 **if you got an usb device mount on your router, upload the package on the usb device**
 
 ### Step 3
 install the packages with:
-opkg install **package.ipk**
+*opkg install **package.ipk** *
 
 You can install multiple packages at the same time.
 
