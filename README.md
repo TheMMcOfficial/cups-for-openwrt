@@ -197,7 +197,8 @@ restart cups
 
 ```/etc/init.d/cupsd restart ```
 
-sources: 
+**sources: **
+
 https://wiki.openwrt.org/doc/howto/cups.server
 
 http://mattie47.com/getting-cups-working-on-openwrt/
