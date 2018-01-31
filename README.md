@@ -27,6 +27,9 @@ make menuconfig (set Network->Printing->cups as "M" and set the target to your r
 
 make
 
+copy the following packages on the router with the scp command: 
+
+
 scp Package root@192.168.0.1:/DESTINATION
 
 **if you got an usb device mount on your router, upload the package on the usb device**
