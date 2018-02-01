@@ -1,5 +1,5 @@
 # CUPS for Openwrt/LEDE
-If you want to install cups on your openwrt/openwrt-LEDE router to share a usb printer or to enable airprint on your usb/network printer follow these steps. If you follow these step you will be able to print via an ios device, android, macos, linux and windows.
+If you want to install cups on your openwrt/openwrt-LEDE router to share a usb printer over network or to enable airprint on your usb/network printer follow these steps. If you follow these step you will be able to print via an ios device, android, macos, linux and windows.
 
 ### Step 1
 Find the "Platform" of your router on the openwrt. https://wiki.openwrt.org/toh/start
