@@ -156,6 +156,11 @@ And paste this. Replace all the "YOUR_PRINTER" by the name gave in the cups conf
 </service-group>
 ```
 
+restart avahi
+
+```
+/etc/init.d/avahi-daemon restart
+```
 
 I don't know if the last two file are required but I have create them.
 
