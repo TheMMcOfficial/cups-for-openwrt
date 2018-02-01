@@ -48,24 +48,24 @@ copy the following packages on the router with the scp command:
 
 you will find these packages there:
 
-/source/bin/packages/arm_cortex-a9_vfpv3/cups/
+/source/bin/packages/PLATFORM/cups/
 
-cups_2.1.4-1_arm_cortex-a9_vfpv3.ipk 
+cups_2.1.4-1_PLATFORM.ipk 
 
-libcups_2.1.4-1_arm_cortex-a9_vfpv3.ipk 
+libcups_2.1.4-1_PLATFORM.ipk 
 
-libcupscgi_2.1.4-1_arm_cortex-a9_vfpv3.ipk
+libcupscgi_2.1.4-PLATFORM.ipk
 
-libcupsmime_2.1.4-1_arm_cortex-a9_vfpv3.ipk
+libcupsmime_2.1.4-1_PLATFORM.ipk
 
-libcupsppdc_2.1.4-1_arm_cortex-a9_vfpv3.ipk
+libcupsppdc_2.1.4-1_PLATFORM.ipk
 
 
 you will find this package here:
 
-/source/bin/packages/arm_cortex-a9_vfpv3/packages
+/source/bin/packages/PLATFORM/packages
 
-libpng_1.6.34-1_arm_cortex-a9_vfpv3.ipk
+libpng_1.6.34-1_PLATFORM.ipk
 
 you can also update the libjpg if you want
 
