@@ -1,0 +1,29 @@
+Package: libjpeg
+Version: 9a-1
+Depends: libc
+Source: feeds/packages/libs/libjpeg
+License: IJG
+LicenseFiles: README
+Section: libs
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mips_24kc
+Installed-Size: 89688
+Filename: libjpeg_9a-1_mips_24kc.ipk
+Size: 90392
+SHA256sum: a501821902e6092387a9a8fe2d378e7fbb559bed5c062aef76e096cd51338868
+Description:  The Independent JPEG Group's JPEG runtime library
+
+Package: libpng
+Version: 1.6.34-1
+Depends: libc, zlib
+Source: feeds/packages/libs/libpng
+License: Libpng GPL-2.0+ BSD-3-Clause
+Section: libs
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mips_24kc
+Installed-Size: 79318
+Filename: libpng_1.6.34-1_mips_24kc.ipk
+Size: 80209
+SHA256sum: 3f4aa139134fcc18f9224e735b0a676312fc3e2d53f8198dc5d9f3291b317d0c
+Description:  A PNG format files handling library
+

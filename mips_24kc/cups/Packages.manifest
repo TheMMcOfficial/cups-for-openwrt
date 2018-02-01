@@ -1,0 +1,135 @@
+Package: cups-bjnp
+Version: 2.0-1
+Depends: libc, cups
+Source: feeds/cups/cups-bjnp
+Section: net
+Architecture: mips_24kc
+Installed-Size: 15424
+Filename: cups-bjnp_2.0-1_mips_24kc.ipk
+Size: 16170
+SHA256sum: 64c1a735d4794b4c5a42eccdadba068379a64caeae9a1dbe10ce882708bf32b7
+Description:  CUPS backend for the canon printers using the proprietary USB over
+ IP BJNP protocol. This backend allows Cups to print over the network
+ to a Canon printer. It currently supports Cups 1.2 and Cups 1.3 and
+ is designed by reverse engineering.
+
+Package: cups-bsd
+Version: 2.1.4-1
+Depends: libc, libcups
+Source: feeds/cups/cups
+Section: net
+Architecture: mips_24kc
+Installed-Size: 9919
+Filename: cups-bsd_2.1.4-1_mips_24kc.ipk
+Size: 10618
+SHA256sum: 9d4335b87052fb2e39d76553d718309e3436b2ca4f9edca267ee39d5f6f2638d
+Description:  Common UNIX Printing System - BSD commands (old)
+
+Package: cups-client
+Version: 2.1.4-1
+Depends: libc, libcups, libcupsimage, libcupsmime
+Source: feeds/cups/cups
+Section: net
+Architecture: mips_24kc
+Installed-Size: 85682
+Filename: cups-client_2.1.4-1_mips_24kc.ipk
+Size: 86435
+SHA256sum: 19fcd404b0909f4a1767537d32ce910c765c37725d71123ce7add7e8918062bb
+Description:  Common UNIX Printing System - Client commands
+
+Package: cups-filters
+Version: 2.1.4-1
+Depends: libc, libcupsimage
+Source: feeds/cups/cups
+Section: net
+Architecture: mips_24kc
+Installed-Size: 39541
+Filename: cups-filters_2.1.4-1_mips_24kc.ipk
+Size: 40343
+SHA256sum: 2de6b29bc275c3fb9ea9b93aa778c1823f6eb906d0cdf974a3320bcd991814bd
+Description:  Common UNIX Printing System - Filter
+
+Package: cups-ppdc
+Version: 2.1.4-1
+Depends: libc, libcupsppdc
+Source: feeds/cups/cups
+Section: net
+Architecture: mips_24kc
+Installed-Size: 11662
+Filename: cups-ppdc_2.1.4-1_mips_24kc.ipk
+Size: 12365
+SHA256sum: c9c6cfa29128976b66ce0b4afbcc35479d12b05ac3fab23ca6eb2312fd5d38b9
+Description:  Common UNIX Printing System - PPDC utils
+
+Package: cups
+Version: 2.1.4-1
+Depends: libc, libcups, libcupsmime, libcupscgi, libcupsppdc, libusb-1.0
+Source: feeds/cups/cups
+Section: net
+Architecture: mips_24kc
+Installed-Size: 533372
+Filename: cups_2.1.4-1_mips_24kc.ipk
+Size: 533133
+SHA256sum: 7405a6bfcdf294970d5ba4870456dd1ae14a64cc94437b06c1d6a8fc9c9ac524
+Description:  Common UNIX Printing System (daemon)
+
+Package: libcups
+Version: 2.1.4-1
+Depends: libc, zlib, libpthread, libpng, libjpeg
+Source: feeds/cups/cups
+Section: libs
+Architecture: mips_24kc
+Installed-Size: 157309
+Filename: libcups_2.1.4-1_mips_24kc.ipk
+Size: 154672
+SHA256sum: 10a9d3391a2cbee2289d51146949d94d3682d77a4128e85eff4a2385886dc229
+Description:  Common UNIX Printing System - Core library
+
+Package: libcupscgi
+Version: 2.1.4-1
+Depends: libc, libcups
+Source: feeds/cups/cups
+Section: libs
+Architecture: mips_24kc
+Installed-Size: 20628
+Filename: libcupscgi_2.1.4-1_mips_24kc.ipk
+Size: 21292
+SHA256sum: 4d72748427f2a042b0474c491baf9d9c16dbdc645071f24458c167029c0fab4b
+Description:  Common UNIX Printing System - CGI library
+
+Package: libcupsimage
+Version: 2.1.4-1
+Depends: libc, libcups
+Source: feeds/cups/cups
+Section: libs
+Architecture: mips_24kc
+Installed-Size: 10642
+Filename: libcupsimage_2.1.4-1_mips_24kc.ipk
+Size: 11330
+SHA256sum: 3e4a656e1311ce4fb617ea6c64054415f5c0c202b70fbf74154b2c83bac16f16
+Description:  Common UNIX Printing System - Image library
+
+Package: libcupsmime
+Version: 2.1.4-1
+Depends: libc, libcups
+Source: feeds/cups/cups
+Section: libs
+Architecture: mips_24kc
+Installed-Size: 7482
+Filename: libcupsmime_2.1.4-1_mips_24kc.ipk
+Size: 8212
+SHA256sum: 2b08eaf805ca4cfce706777c49905a6be83c7e5cd6b44cc2e6f639768e1af68c
+Description:  Common UNIX Printing System - MIME library
+
+Package: libcupsppdc
+Version: 2.1.4-1
+Depends: libc, libcups, libstdcpp
+Source: feeds/cups/cups
+Section: libs
+Architecture: mips_24kc
+Installed-Size: 39330
+Filename: libcupsppdc_2.1.4-1_mips_24kc.ipk
+Size: 40153
+SHA256sum: e17b52ea254d507642973fd511c880a7470d925228ffa1c4b05a832ec9a3d854
+Description:  Common UNIX Printing System - PPDC library
+

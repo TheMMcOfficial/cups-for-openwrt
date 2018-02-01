@@ -1,0 +1,640 @@
+Package: busybox
+Version: 1.27.2-3
+Depends: libc
+Provides: ip
+Alternatives: 100:/bin/kill:/bin/busybox, 100:/bin/ps:/bin/busybox, 100:/sbin/ip:/bin/busybox, 100:/usr/bin/free:/bin/busybox, 100:/usr/bin/pgrep:/bin/busybox, 100:/usr/bin/top:/bin/busybox, 100:/usr/bin/uptime:/bin/busybox
+Source: package/utils/busybox
+License: GPL-2.0
+LicenseFiles: LICENSE archival/libarchive/bz/LICENSE
+Section: base
+Essential: yes
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 212623
+Filename: busybox_1.27.2-3_mips_24kc.ipk
+Size: 212957
+SHA256sum: f9872540949f3218aec26d340a5bc92ec918c1d2f39771c8de4217b5d6aecdc1
+Description:  The Swiss Army Knife of embedded Linux.
+ It slices, it dices, it makes Julian Fries.
+
+Package: dnsmasq
+Version: 2.78-10
+Depends: libc, libubus
+Source: package/network/services/dnsmasq
+License: GPL-2.0
+LicenseFiles: COPYING
+Section: net
+Require-User: dnsmasq=453:dnsmasq=453
+Architecture: mips_24kc
+Installed-Size: 94889
+Filename: dnsmasq_2.78-10_mips_24kc.ipk
+Size: 95464
+SHA256sum: dd36327a0eb2a91963d1fba31ddd082db1110b534d443f1fa5c29a1dddaefaaa
+Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
+
+Package: dropbear
+Version: 2017.75-5
+Depends: libc
+Source: package/network/services/dropbear
+License: MIT
+LicenseFiles: LICENSE libtomcrypt/LICENSE libtommath/LICENSE
+Section: net
+Architecture: mips_24kc
+Installed-Size: 86577
+Filename: dropbear_2017.75-5_mips_24kc.ipk
+Size: 86668
+SHA256sum: e42abb1983a081c7ce7f1cadcf9f064070e326a3412e584b936861e230581cfa
+Description:  A small SSH2 server/client designed for small memory environments.
+
+Package: firewall
+Version: 2017-11-07-c4309372-1
+Depends: libc, libubox, libubus, libuci, libip4tc, libip6tc, libxtables, kmod-ipt-core, kmod-ipt-conntrack, kmod-ipt-nat
+Source: package/network/config/firewall
+License: ISC
+Section: net
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mips_24kc
+Installed-Size: 36266
+Filename: firewall_2017-11-07-c4309372-1_mips_24kc.ipk
+Size: 36922
+SHA256sum: ffb7eef95957c261b11e18af06ad5a8f382d18785aae2bdb3521ea0429073c65
+Description:  This package provides a config-compatible C implementation of the UCI firewall.
+
+Package: hostapd-common
+Version: 2017-08-24-c2d4f2eb-6
+Depends: libc
+Source: package/network/services/hostapd
+License: BSD-3-Clause
+Section: net
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 5820
+Filename: hostapd-common_2017-08-24-c2d4f2eb-6_mips_24kc.ipk
+Size: 6550
+SHA256sum: adc147e2f3c36ee895524c144027afed35bf9cefadae6bcb15ce071ffe51e51d
+Description:  hostapd/wpa_supplicant common support files
+
+Package: ip6tables
+Version: 1.6.1-2
+Depends: libc, kmod-ip6tables, iptables
+Source: package/network/utils/iptables
+License: GPL-2.0
+Section: net
+Architecture: mips_24kc
+Installed-Size: 211
+Filename: ip6tables_1.6.1-2_mips_24kc.ipk
+Size: 899
+SHA256sum: ff0576fadf718c666492f02b6e1819e6e0bcca9fc46957933bef29301a1e12fd
+Description:  IPv6 firewall administration tool
+
+Package: iptables
+Version: 1.6.1-2
+Depends: libc, kmod-ipt-core, libip4tc, libip6tc, libxtables
+Source: package/network/utils/iptables
+License: GPL-2.0
+Section: net
+Architecture: mips_24kc
+Installed-Size: 21492
+Filename: iptables_1.6.1-2_mips_24kc.ipk
+Size: 22146
+SHA256sum: e5534d3769669610aed75d374e52519ba5cac7d72451cd1a27453f27c81fb804
+Description:  IP firewall administration tool.
+ 
+ Matches:
+ - icmp
+ - tcp
+ - udp
+ - comment
+ - conntrack
+ - limit
+ - mac
+ - mark
+ - multiport
+ - set
+ - state
+ - time
+ 
+ Targets:
+ - ACCEPT
+ - CT
+ - DNAT
+ - DROP
+ - REJECT
+ - LOG
+ - MARK
+ - MASQUERADE
+ - REDIRECT
+ - SET
+ - SNAT
+ - TCPMSS
+ 
+ Tables:
+ - filter
+ - mangle
+ - nat
+ - raw
+ 
+
+Package: iw
+Version: 4.9-1
+Depends: libc, libnl-tiny
+Source: package/network/utils/iw
+License: GPL-2.0
+Section: net
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 33198
+Filename: iw_4.9-1_mips_24kc.ipk
+Size: 33943
+SHA256sum: 92cba7e8e6d2100a47c760f46cec9e773e8106eae7083c03e61143b6084082bd
+Description:  cfg80211 interface configuration utility
+
+Package: jshn
+Version: 2018-01-07-1c08e803-1
+Depends: libc, libjson-c, libubox, libblobmsg-json
+Source: package/libs/libubox
+License: ISC
+Section: utils
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 5338
+Filename: jshn_2018-01-07-1c08e803-1_mips_24kc.ipk
+Size: 6103
+SHA256sum: 71be0af00fb38272666d552207c91f7c52605ed636ccaf5f7961b3275862a0b6
+Description:  Library for parsing and generating JSON from shell scripts
+
+Package: jsonfilter
+Version: 2016-07-02-dea067ad-1
+Depends: libc, libubox, libjson-c
+Source: package/utils/jsonfilter
+License: ISC
+Section: base
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mips_24kc
+Installed-Size: 7601
+Filename: jsonfilter_2016-07-02-dea067ad-1_mips_24kc.ipk
+Size: 8376
+SHA256sum: b5a1873073d91a1bb44bb058d2305574cf20a8425ec03d4e844371d87be2091a
+Description:  OpenWrt JSON filter utility
+
+Package: lede-keyring
+Version: 2017-01-20-a50b7529-1
+Depends: libc
+Source: package/system/lede-keyring
+License: GPL-2.0
+Section: base
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: mips_24kc
+Installed-Size: 866
+Filename: lede-keyring_2017-01-20-a50b7529-1_mips_24kc.ipk
+Size: 1635
+SHA256sum: 49f23bc063709468fc312d3955bd3b90d3dc37c710cda671a67421d2559eaf1a
+Description:  The keyring of with the developer using and gpg public keys.
+
+Package: libblobmsg-json
+Version: 2018-01-07-1c08e803-1
+Depends: libc, libjson-c, libubox
+Source: package/libs/libubox
+License: ISC
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 3472
+Filename: libblobmsg-json_2018-01-07-1c08e803-1_mips_24kc.ipk
+Size: 4185
+SHA256sum: 0edff7fc1824b7fd76d0a06fd48bf908833c209b5968ec2a41e808c555dfca72
+Description:  blobmsg <-> json conversion library
+
+Package: libip4tc
+Version: 1.6.1-2
+Depends: libc, libxtables
+Source: package/network/utils/iptables
+License: GPL-2.0
+Section: libs
+Architecture: mips_24kc
+Installed-Size: 17568
+Filename: libip4tc_1.6.1-2_mips_24kc.ipk
+Size: 18286
+SHA256sum: be5ef3eb15ea649eb28e28e8daa96fec5b534a42ee07a4161978f94c27c7e759
+Description:  IPv4 firewall - shared libiptc library
+
+Package: libip6tc
+Version: 1.6.1-2
+Depends: libc, libxtables
+Source: package/network/utils/iptables
+License: GPL-2.0
+Section: libs
+Architecture: mips_24kc
+Installed-Size: 17266
+Filename: libip6tc_1.6.1-2_mips_24kc.ipk
+Size: 18012
+SHA256sum: 616394bf06414f4afe08dbe009273a9002e3e6703b34b9c8d190fcbaa749cd8e
+Description:  IPv6 firewall - shared libiptc library
+
+Package: libjson-c
+Version: 0.12.1-1
+Depends: libc
+Source: package/libs/libjson-c
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 13470
+Filename: libjson-c_0.12.1-1_mips_24kc.ipk
+Size: 14176
+SHA256sum: 66da57a41bf7f0e0770a69001f5a7f6af02522eaa0a0c199cc520a7cbe724407
+Description:  This package contains a library for javascript object notation backends.
+
+Package: libjson-script
+Version: 2018-01-07-1c08e803-1
+Depends: libc, libubox
+Source: package/libs/libubox
+License: ISC
+Section: utils
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 4608
+Filename: libjson-script_2018-01-07-1c08e803-1_mips_24kc.ipk
+Size: 5323
+SHA256sum: ee80523ba5cf1e614637c91c5d04b32da24b4e89425add82b1b798931acae4fc
+Description:  Minimalistic JSON based scripting engine
+
+Package: libnl-tiny
+Version: 0.1-5
+Depends: libc
+Source: package/libs/libnl-tiny
+License: LGPL-2.1
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 11836
+Filename: libnl-tiny_0.1-5_mips_24kc.ipk
+Size: 12571
+SHA256sum: 47ced90440beed366580ae0f1285602213d493450767dbb05842e5389297b911
+Description:  This package contains a stripped down version of libnl
+
+Package: libubox
+Version: 2018-01-07-1c08e803-1
+Depends: libc
+Source: package/libs/libubox
+License: ISC
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 17955
+Filename: libubox_2018-01-07-1c08e803-1_mips_24kc.ipk
+Size: 18690
+SHA256sum: efdcb2b6fcffb354c8eeece78f56ba9b4fab28b299f88b065c8c52d201e16401
+Description:  Basic utility library
+
+Package: libubus
+Version: 2018-01-16-5bae22eb-1
+Depends: libc, libubox
+Source: package/system/ubus
+License: LGPL-2.1
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 8806
+Filename: libubus_2018-01-16-5bae22eb-1_mips_24kc.ipk
+Size: 9579
+SHA256sum: 041503e02a31df17adf589550f989d7f3bc503e86f75f4e2ca0546d92ca74bee
+Description:  OpenWrt RPC client library
+
+Package: libuci
+Version: 2018-01-01-5beb95da-1
+Depends: libc, libubox
+Source: package/system/uci
+License: LGPL-2.1
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 13745
+Filename: libuci_2018-01-01-5beb95da-1_mips_24kc.ipk
+Size: 14463
+SHA256sum: 3e5f1da1e8d9d3e39230276212de68582831be9b257c22c56077d6fe5ac5d8e9
+Description:  C library for the Unified Configuration Interface (UCI)
+
+Package: libuclient
+Version: 2017-11-02-4b87d831-1
+Depends: libc, libubox
+Source: package/libs/uclient
+License: ISC
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 8725
+Filename: libuclient_2017-11-02-4b87d831-1_mips_24kc.ipk
+Size: 9485
+SHA256sum: bddd75639d8942f656d69ecc941a43a2c72b68869397e31f409b3c4e95210d52
+Description:  HTTP/1.1 client library
+
+Package: libusb-1.0
+Version: 1.0.21-1
+Depends: libc, libpthread, librt
+Source: package/libs/libusb
+License: LGPL-2.1
+Section: libs
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 24808
+Filename: libusb-1.0_1.0.21-1_mips_24kc.ipk
+Size: 25540
+SHA256sum: a0b16303f24bb4fe96f9e997076a51577ccf0ad3883ba0b6527bcc4b4fba815d
+Description:  libusb is a C library that gives applications easy access to USB devices on
+ many different operating systems.
+
+Package: libxtables
+Version: 1.6.1-2
+Depends: libc
+Source: package/network/utils/iptables
+License: GPL-2.0
+Section: libs
+Architecture: mips_24kc
+Installed-Size: 36519
+Filename: libxtables_1.6.1-2_mips_24kc.ipk
+Size: 37253
+SHA256sum: 836aaae7191d52833529b37d8e1f76749728b6a8f776cc0000c6337562d24cbb
+Description:  IPv4/IPv6 firewall - shared xtables library
+
+Package: logd
+Version: 2017-11-13-e7a63fba-1
+Depends: libc, libubox, libubus, libblobmsg-json
+Source: package/system/ubox
+License: GPL-2.0
+Section: base
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: mips_24kc
+Installed-Size: 9276
+Filename: logd_2017-11-13-e7a63fba-1_mips_24kc.ipk
+Size: 10011
+SHA256sum: 27825b436e16a42908b5eb49f35482000c42d395b6caa85815e49c4a7d58790c
+Description:  OpenWrt system log implementation
+
+Package: mtd
+Version: 21
+Depends: libc, libubox
+Source: package/system/mtd
+License: GPL-2.0+
+Section: utils
+Architecture: mips_24kc
+Installed-Size: 12824
+Filename: mtd_21_mips_24kc.ipk
+Size: 13553
+SHA256sum: 30d24ee4fd40f8b3bcc63d16be03706f43a966d48efb88048f8b4a3e5888a875
+Description:  This package contains an utility useful to upgrade from other firmware or 
+ older OpenWrt releases.
+
+Package: netifd
+Version: 2018-01-24-af3cadb6-2
+Depends: libc, libuci, libnl-tiny, libubus, ubus, ubusd, jshn, libubox
+Source: package/network/config/netifd
+License: GPL-2.0
+Section: base
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 59604
+Filename: netifd_2018-01-24-af3cadb6-2_mips_24kc.ipk
+Size: 60301
+SHA256sum: bbea11ab9c857eceb5076188491c9c7e2da3bceb3e535ac9d0fcdc75cf3761cb
+Description:  OpenWrt Network Interface Configuration Daemon
+
+Package: odhcp6c
+Version: 2017-09-05-1f93bd4c-5
+Depends: libc, libubox
+Source: package/network/ipv6/odhcp6c
+License: GPL-2.0
+Section: net
+Maintainer: Hans Dedecker <dedeckeh@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 22328
+Filename: odhcp6c_2017-09-05-1f93bd4c-5_mips_24kc.ipk
+Size: 23066
+SHA256sum: d600ef812ba719759a25b101a74aa50a23b6b40ea514f76fdeae0d573a7367bb
+Description:  Embedded DHCPv6-client for OpenWrt
+
+Package: odhcpd-ipv6only
+Version: 1.3-1
+Depends: libc, libubox, libuci, libubus, libnl-tiny
+Source: package/network/services/odhcpd
+License: GPL-2.0
+Section: net
+Maintainer: Hans Dedecker <dedeckeh@gmail.com>
+Architecture: mips_24kc
+Installed-Size: 27353
+Filename: odhcpd-ipv6only_1.3-1_mips_24kc.ipk
+Size: 28094
+SHA256sum: e2303e65e36ae8b8b87df6173dce9e82323bd05cdeff08f2b52a0094d40befb4
+Description:  odhcpd is a daemon for serving and relaying IP management protocols to
+ configure clients and downstream routers. It tries to follow the RFC 6204
+ requirements for IPv6 home routers.
+ 
+ This is a variant providing server services for RA, stateless and stateful
+ DHCPv6,  prefix delegation and can be used to relay RA, DHCPv6 and NDP between
+ routed (non-bridged) interfaces in case no delegated prefixes are available.
+
+Package: opkg
+Version: 2017-12-07-3b417b9f-2
+Depends: libc, uclient-fetch, libpthread, libubox
+Source: package/system/opkg
+License: GPL-2.0
+LicenseFiles: COPYING
+Section: base
+Essential: yes
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mips_24kc
+Installed-Size: 59092
+Filename: opkg_2017-12-07-3b417b9f-2_mips_24kc.ipk
+Size: 60045
+SHA256sum: 4b6fa95963056fc6699439ff2e394c40c459ba667454c499e3a7b60db66c3c5a
+Description:  Lightweight package management system
+ opkg is the opkg Package Management System, for handling
+ installation and removal of packages on a system. It can
+ recursively follow dependencies and download all packages
+ necessary to install a particular package.
+ 
+ opkg knows how to install both .ipk and .deb packages.
+
+Package: ppp-mod-pppoe
+Version: 2.4.7-12
+Depends: libc, kmod-pppoe
+Source: package/network/services/ppp
+License: BSD-4-Clause
+Section: net
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 9028
+Filename: ppp-mod-pppoe_2.4.7-12_mips_24kc.ipk
+Size: 9785
+SHA256sum: 5e47c32604e52722e9e68879b94b7c4a90312c8dad0a8c67c3b6fb29b1cb0cb1
+Description:  This package contains a PPPoE (PPP over Ethernet) plugin for ppp.
+
+Package: ppp
+Version: 2.4.7-12
+Depends: libc, kmod-ppp
+Source: package/network/services/ppp
+License: BSD-4-Clause
+Section: net
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 97643
+Filename: ppp_2.4.7-12_mips_24kc.ipk
+Size: 98397
+SHA256sum: 7d6ab28fa0e45fdda4507f26453f7b8d0858b25a7c220cc4f87c12dd3a32b8ed
+Description:  This package contains the PPP (Point-to-Point Protocol) daemon.
+
+Package: procd
+Version: 2018-01-23-653629f1-2
+Depends: libc, ubusd, ubus, libjson-script, ubox, libubox, libubus
+Source: package/system/procd
+License: GPL-2.0
+Section: base
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: mips_24kc
+Installed-Size: 37114
+Filename: procd_2018-01-23-653629f1-2_mips_24kc.ipk
+Size: 37628
+SHA256sum: bc1da0115d6a626cef3063bb9a0d9966351133b89bb8c4ff511ac7eca800d57c
+Description:  OpenWrt system process manager
+
+Package: swconfig
+Version: 11
+Depends: libc, libuci, libnl-tiny
+Source: package/network/config/swconfig
+License: GPL-2.0
+Section: base
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 8380
+Filename: swconfig_11_mips_24kc.ipk
+Size: 9102
+SHA256sum: e52bd3dbc1fd9775e64295f2ffaf8a9773e9e803a73ce7d92f953a723fde9537
+Description:  Switch configuration utility
+
+Package: ubox
+Version: 2017-11-13-e7a63fba-1
+Depends: libc, libubox, ubusd, ubus, libubus, libuci
+Source: package/system/ubox
+License: GPL-2.0
+Section: base
+Maintainer: John Crispin <john@phrozen.org>
+Architecture: mips_24kc
+Installed-Size: 14370
+Filename: ubox_2017-11-13-e7a63fba-1_mips_24kc.ipk
+Size: 15076
+SHA256sum: af2aa8286e1d5507bd80e06f6b2bc5a4c2d6556c39ea87a41cf10f3a2128709f
+Description:  OpenWrt system helper toolbox
+
+Package: ubus
+Version: 2018-01-16-5bae22eb-1
+Depends: libc, libubus, libblobmsg-json, ubusd
+Source: package/system/ubus
+License: LGPL-2.1
+Section: base
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 4904
+Filename: ubus_2018-01-16-5bae22eb-1_mips_24kc.ipk
+Size: 5642
+SHA256sum: 4dbcbd1f4f90a0df47b6793055ecc20a19ca40d5640dd1e39c91bc58945f1058
+Description:  OpenWrt RPC client utility
+
+Package: ubusd
+Version: 2018-01-16-5bae22eb-1
+Depends: libc, libubox, libblobmsg-json
+Source: package/system/ubus
+License: LGPL-2.1
+Section: base
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 9061
+Filename: ubusd_2018-01-16-5bae22eb-1_mips_24kc.ipk
+Size: 9843
+SHA256sum: 9fd95adc6a59a9dd557f9cacd10d944b6b77a0ad76f90363e92f541d77d7314d
+Description:  OpenWrt RPC daemon
+
+Package: uci
+Version: 2018-01-01-5beb95da-1
+Depends: libc, libuci
+Source: package/system/uci
+License: LGPL-2.1
+Section: base
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 6521
+Filename: uci_2018-01-01-5beb95da-1_mips_24kc.ipk
+Size: 7285
+SHA256sum: 64ca087e3b080ecdc56c74094bd8c0e87be8acc8e0fe51f44a94fd6f48677dd8
+Description:  Utility for the Unified Configuration Interface (UCI)
+
+Package: uclient-fetch
+Version: 2017-11-02-4b87d831-1
+Depends: libc, libuclient
+Source: package/libs/uclient
+License: ISC
+Section: net
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 6685
+Filename: uclient-fetch_2017-11-02-4b87d831-1_mips_24kc.ipk
+Size: 7457
+SHA256sum: e5bd68a291c7d1b0ebe82c560ab9ef5a7d06884c73d6c37347a5aeba3247186e
+Description:  Tiny wget replacement using libuclient
+
+Package: usign
+Version: 2015-07-04-ef641914-1
+Depends: libc, libubox
+Source: package/system/usign
+License: ISC
+Section: base
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 12093
+Filename: usign_2015-07-04-ef641914-1_mips_24kc.ipk
+Size: 12834
+SHA256sum: d75ef8ad68fd5b605bcf717f26f9088c850626d78a813f95fdd820fcd56dbff7
+Description:  OpenWrt signature verification utility
+
+Package: wireless-regdb
+Version: 2017-10-20-4343d359
+Depends: libc
+Source: package/firmware/wireless-regdb
+Section: firmware
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 1826
+Filename: wireless-regdb_2017-10-20-4343d359_mips_24kc.ipk
+Size: 2547
+SHA256sum: c505918fe938b36fcad808e806806ac3c0c9b7ab2b6cb4d4ca70d40c5b040240
+Description:  Wireless Regulatory Database
+
+Package: wpad-mini
+Version: 2017-08-24-c2d4f2eb-6
+Depends: libc, libnl-tiny, hostapd-common, libubus
+Source: package/network/services/hostapd
+License: BSD-3-Clause
+Section: net
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: mips_24kc
+Installed-Size: 245682
+Filename: wpad-mini_2017-08-24-c2d4f2eb-6_mips_24kc.ipk
+Size: 246393
+SHA256sum: ce95594e10d26b053f02bbc393067ee86b6581e4fee927374c455b296ad582f8
+Description:  This package contains a minimal IEEE 802.1x/WPA Authenticator and Supplicant (WPA-PSK only).
+
+Package: zlib
+Version: 1.2.11-2
+Depends: libc
+Source: package/libs/zlib
+License: Zlib
+LicenseFiles: README
+Section: libs
+Architecture: mips_24kc
+Installed-Size: 37295
+Filename: zlib_1.2.11-2_mips_24kc.ipk
+Size: 37984
+SHA256sum: d13b5dc8da03810ddf327c5a51157dd00bff152fd872e20763a25266224d3cee
+Description:  zlib is a lossless data-compression library.
+ This package includes the shared library.
+
