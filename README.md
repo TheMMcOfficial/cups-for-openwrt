@@ -113,6 +113,12 @@ Allow From 192.168.0.0/24
 </Location>
 ```
 
+restart cups
+
+```
+/etc/init.d/cupsd restart
+```
+
 ### Step 5
 Configure the printer in cups.
 
