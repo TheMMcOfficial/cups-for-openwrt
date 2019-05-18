@@ -195,25 +195,32 @@ create the following file
 And paste this. Replace all the "YOUR_PRINTER" by the name gave in the cups configuration. 
 
 ```
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding='UTF-8'?>
 <!DOCTYPE service-group SYSTEM "avahi-service.dtd">
 <service-group>
-  <name replace-wildcards="yes">AirPrint YOUR_PRINTER @ %h</name>
-  <service>
-    <type>_ipp._tcp</type>
-    <subtype>_universal._sub._ipp._tcp</subtype>
-    <port>631</port>
-    <txt-record>txtvers=1</txt-record>
-    <txt-record>qtotal=1</txt-record>
-    <txt-record>Transparent=T</txt-record>
-    <txt-record>URF=none</txt-record>
-    <txt-record>rp=printers/YOUR_PRINTER</txt-record>
-    <txt-record>note=YOUR_PRINTER</txt-record>
-    <txt-record>printer-state=3</txt-record>
-    <txt-record>printer-type=0x821054</txt-record>
-    <txt-record>pdl=application/octet-stream,application/pdf,application/postscript,image/gif,image/jpeg
+<name replace-wildcards="yes">AirPrint YOUR_PRINTER @ %h</name>
+<service>
+       <type>_ipp._tcp</type>
+       <!-- This is key for AirPrint -->
+       <subtype>_universal._sub._ipp._tcp</subtype>
+       <port>631</port>
+       <!-- These are copied from the txt portion of the above output -->
+       <txt-record>txtvers=1</txt-record>
+       <txt-record>qtotal=1</txt-record>
+       <txt-record>rp=printers/YOUR_PRINTER</txt-record>
+       <txt-record>ty=I make the printer Go</txt-record>
+       <!-- This is visible in iPhone UI -->
+       <txt-record>note=I am an AirPrint Printer</txt-record>
+       <txt-record>product=(GPL Ghostscript)</txt-record>
+       <txt-record>printer-state=3</txt-record>
+       <txt-record>printer-type=0x3006</txt-record>
+       <txt-record>Binary=T</txt-record>
+       <txt-record>Transparent=T</txt-record>
+       <txt-record>URF=DM3</txt-record>
+       <txt-record>pdl=application/octet-stream,application/pdf,application/postscript,application/vnd.cups-raster,image/gif,image/jpeg,image/png,image/tiff,image/urf,text/html,text/plain,application/vnd.adobe-reader-postscript,application/vnd.cups-pdf</txt-record>
 </service>
 </service-group>
+
 ```
 
 restart avahi
