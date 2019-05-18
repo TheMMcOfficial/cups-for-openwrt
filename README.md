@@ -255,8 +255,8 @@ image/urf urf string(0,UNIRAST<00>)
 
 To make cups and avahi-demon start at boot
 
-```/etc/init.d/cupsd enable
-/etc/init.d/avahi-daemon enable```
+```/etc/init.d/cupsd enable```
+```/etc/init.d/avahi-daemon enable```
 
 ### Optional step
 
@@ -274,7 +274,7 @@ TempDir /mnt/shares/cups_spool
 
 restart cups
 
-```/etc/init.d/cupsd restart ```
+```/etc/init.d/cupsd restart```
 
 ### Sources:
 
