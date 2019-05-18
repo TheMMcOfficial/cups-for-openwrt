@@ -296,4 +296,6 @@ http://openrouter.info/forum/viewtopic.php?f=22&t=1856
 
 https://forum.lede-project.org/t/compile-lede-with-error/2195/3
 
+https://forums.linuxmint.com/viewtopic.php?t=114904
+
 
