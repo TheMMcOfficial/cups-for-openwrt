@@ -256,6 +256,7 @@ image/urf urf string(0,UNIRAST<00>)
 To make cups and avahi-demon start at boot
 
 ```/etc/init.d/cupsd enable```
+
 ```/etc/init.d/avahi-daemon enable```
 
 ### Optional step
