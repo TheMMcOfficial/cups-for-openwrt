@@ -22,14 +22,12 @@ cd source
 
 echo "src-git cups https://github.com/Gr4ffy/lede-cups.git" >> feeds.conf.default
 
-cd scripts
-
-./feeds update -a
+./scripts/feeds update -a
 ```
 
 **make sure to have all the dependencies install to compile the package**
 ```
-./feeds install -a
+./scripts/feeds install -a
 
 make menuconfig
 ```
@@ -52,8 +50,6 @@ you will find these packages there:
 
 cups_2.1.4-1_PLATFORM.ipk 
 
-libcups_2.1.4-1_PLATFORM.ipk 
-
 libcupscgi_2.1.4-PLATFORM.ipk
 
 libcupsmime_2.1.4-1_PLATFORM.ipk
@@ -66,6 +62,8 @@ you will find this package here:
 /source/bin/packages/PLATFORM/packages
 
 libpng_1.6.34-1_PLATFORM.ipk
+
+libcups_2.1.4-1_PLATFORM.ipk 
 
 you can also update the libjpg if you want
 
