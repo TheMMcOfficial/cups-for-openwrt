@@ -69,7 +69,9 @@ you can also update the libjpg if you want
 
 /source/bin/packages/PLATFORM/base
 
-libusb-1.0_1.0.21-1_PATFORM.ipk
+libusb-1.0_1.0.21-1_PLATFORM.ipk
+
+zlib_1.2.11-3_PLATFORM.ipk
 
 ```scp Package root@192.168.0.1:/DESTINATION/PACKAGENAME```
 
