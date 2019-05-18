@@ -71,7 +71,7 @@ you can also update the libjpg if you want
 
 libusb-1.0_1.0.21-1_PLATFORM.ipk
 
-zlib_1.2.11-3_PLATFORM.ipk
+zlib_1.2.11-2_PLATFORM.ipk
 
 ```scp Package root@192.168.0.1:/DESTINATION/PACKAGENAME```
 
@@ -92,6 +92,10 @@ If you got the compiled version of cups (LEDE) run this:
 
 You can install multiple packages at the same time.
 
+You will maybe have to install avahi-demon too.
+
+opkg install avahi-daemon
+
 ### Step 4
 Configure cups.
 
@@ -102,19 +106,65 @@ Change the config of cups to be able to modify the config of cups over your netw
 ```vi /etc/cups/cupsd.conf```
 
 ```
-change
-User Nobody
-Group Nobody
+#######################################################################
+#                                                                      #
+# This is the CUPS configuration file.  If you are familiar with       #
+# Apache or any of the other popular web servers, we've followed the   #
+# same format.  Any configuration variable used here has the same      #
+# semantics as the corresponding variable in Apache.  If we need       #
+# different functionality then a different name is used to avoid       #
+# confusion...                                                         #
+#                                                                      #
+########################################################################
 
-to:
+
+AccessLog syslog
+ErrorLog syslog
+LogLevel info
+PageLog syslog
+PreserveJobHistory No
+PreserveJobFiles No
+AutoPurgeJobs Yes
+MaxJobs 25
+MaxPrinterHistory 10
+#Printcap /etc/printcap
+#PrintcapFormat BSD
+RequestRoot /var/cups
+#RemoteRoot remroot
+#User nobody
+#Group nobody
+# root permissions required to make cups work with the usb backend
 User root
 Group root
+RIPCache auto
+TempDir /var/cups
+Port 631
+HostNameLookups On
+KeepAlive On
+# No: "BrowseOrder" "BrowseAllow" "BrowseRemoteProtocols"
+Browsing Yes
+BrowsingWebIF Yes
+BrowseLocalProtocols DNSSD
+DefaultShared Yes
+WebInterface Yes
+Listen /var/run/cups/cups.sock
+
+ServerAlias *
 
 <Location />
-Order Deny,Allow
+Order Allow,Deny
 Allow From 127.0.0.1
-Allow From 192.168.0.0/24
+Allow From 192.168.1.0/24
 </Location>
+
+<Location /admin>
+AuthType Basic
+AuthClass System
+Order Allow,Deny
+Allow From 127.0.0.1
+Allow From 192.168.1.0/24
+</Location>
+
 ```
 
 restart cups
@@ -202,6 +252,11 @@ image/urf urf string(0,UNIRAST<00>)
 # End of "$Id: $".
 #
 ```
+
+To make cups and avahi-demon start at boot
+
+```/etc/init.d/cupsd enable
+/etc/init.d/avahi-daemon enable```
 
 ### Optional step
 
