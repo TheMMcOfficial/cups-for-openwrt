@@ -67,6 +67,10 @@ libcups_2.1.4-1_PLATFORM.ipk
 
 you can also update the libjpg if you want
 
+/source/bin/packages/PLATFORM/base
+
+libusb-1.0_1.0.21-1_PATFORM.ipk
+
 ```scp Package root@192.168.0.1:/DESTINATION/PACKAGENAME```
 
 **If your router's ip is not 192.168.0.1 change it!**
