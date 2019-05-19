@@ -284,6 +284,14 @@ restart cups
 
 ```/etc/init.d/cupsd restart```
 
+To debug avahi/airprint
+
+```opkg install avahi-utils```
+
+```avahi-browse --terminate --resolve _ipp._tcp```
+
+```avahi-browse -rt _universal._sub._ipp._tcp```
+
 ### Sources:
 
 https://wiki.openwrt.org/doc/howto/cups.server
