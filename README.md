@@ -46,30 +46,30 @@ you will find these packages there:
 
 /source/bin/packages/PLATFORM/cups/
 
-cups_2.1.4-1_PLATFORM.ipk 
+cups_VERSION_PLATFORM.ipk 
 
-libcupscgi_2.1.4-PLATFORM.ipk
+libcupscgi_VERSION-PLATFORM.ipk
 
-libcupsmime_2.1.4-1_PLATFORM.ipk
+libcupsmime_VERSION_PLATFORM.ipk
 
-libcupsppdc_2.1.4-1_PLATFORM.ipk
+libcupsppdc_VERSION_PLATFORM.ipk
 
 
 you will find this package here:
 
 /source/bin/packages/PLATFORM/packages
 
-libpng_1.6.34-1_PLATFORM.ipk
+libpng_VERSION_PLATFORM.ipk
 
-libcups_2.1.4-1_PLATFORM.ipk 
+libcups_VERSION_PLATFORM.ipk 
 
 you can also update the libjpg if you want
 
 /source/bin/packages/PLATFORM/base
 
-libusb-1.0_1.0.21-1_PLATFORM.ipk
+libusb-1.0_VERSION_PLATFORM.ipk
 
-zlib_1.2.11-2_PLATFORM.ipk
+zlib_VERSION_PLATFORM.ipk
 
 ```scp Package root@192.168.0.1:/DESTINATION/PACKAGENAME```
 
