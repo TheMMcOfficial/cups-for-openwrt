@@ -25,6 +25,8 @@ echo "src-git cups https://github.com/TheMMcOfficial/lede-cups.git" >> feeds.con
 
 **make sure to have all the dependencies install to compile the package**
 ```
+./scripts/feeds update -a
+
 ./scripts/feeds install -a
 
 make menuconfig
