@@ -75,7 +75,7 @@ zlib_VERSION_PLATFORM.ipk
 
 ```scp Package root@192.168.1.1:/DESTINATION/PACKAGENAME```
 
-**If your router's ip is not 192.168.0.1 change it!**
+**If your router's ip is not 192.168.1.1 change it!**
 **if you got an usb device mount on your router, upload the package on the usb device**
 
 ### Step 3
@@ -176,7 +176,7 @@ restart cups
 ### Step 5
 Configure the printer in cups.
 
-Go to http://192.168.0.1:631
+Go to http://192.168.1.1:631
 
 Add your printer. If your printer is plug via USB you should see it on the screen. 
 If your printer is a network printer you will have to configure it manualy. You will choose the prococol compatible with your printer. Personaly I have configure mine with the socket protocol.
