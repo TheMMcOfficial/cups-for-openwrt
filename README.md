@@ -41,6 +41,7 @@ make menuconfig
 ```
 make
 ```
+This step will take some time so go grab a cofee!
 
 **If you try to compile with the root user you will get errors. To be able to compile you have to type this command:**
 ```
