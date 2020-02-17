@@ -298,6 +298,8 @@ To debug avahi/airprint
 
 ### Sources:
 
+https://openwrt.org/docs/guide-developer/quickstart-build-images
+
 https://wiki.openwrt.org/doc/howto/cups.server
 
 http://mattie47.com/getting-cups-working-on-openwrt/
