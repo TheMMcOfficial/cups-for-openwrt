@@ -13,7 +13,7 @@ If your router run an **LEDE** firmware follow these steps to compile the cups p
 
 If you're lucky maybe the cups package is already build for your platform here: https://wiki.openwrt.org/doc/packages.old
 
-or here for the newer version: https://github.com/syb999/openwrt-musl-cups
+or here for the newer version: https://github.com/syb999/openwrt-musl-cups https://github.com/syb999/openwrt-uclibc-cups
 
 
 Do the following steps on a Linux computer (I recommend a debian base Linux like Ubuntu) to compile the packages.
