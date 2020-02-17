@@ -13,6 +13,8 @@ If your router run an **LEDE** firmware follow these steps to compile the cups p
 
 If you're lucky maybe the cups package is already build for your platform here: https://wiki.openwrt.org/doc/packages.old
 
+or here for the newer version: https://github.com/syb999/openwrt-musl-cups
+
 Do the following steps on the computer to compile the packages.
 
 ```
@@ -306,4 +308,4 @@ https://forum.lede-project.org/t/compile-lede-with-error/2195/3
 
 https://forums.linuxmint.com/viewtopic.php?t=114904
 
-
+https://github.com/syb999/openwrt-musl-cups
