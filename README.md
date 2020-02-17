@@ -73,7 +73,7 @@ libusb-1.0_VERSION_PLATFORM.ipk
 
 zlib_VERSION_PLATFORM.ipk
 
-```scp Package root@192.168.0.1:/DESTINATION/PACKAGENAME```
+```scp Package root@192.168.1.1:/DESTINATION/PACKAGENAME```
 
 **If your router's ip is not 192.168.0.1 change it!**
 **if you got an usb device mount on your router, upload the package on the usb device**
