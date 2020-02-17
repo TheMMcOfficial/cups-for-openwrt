@@ -15,7 +15,8 @@ If you're lucky maybe the cups package is already build for your platform here: 
 
 or here for the newer version: https://github.com/syb999/openwrt-musl-cups
 
-Do the following steps on the computer to compile the packages.
+
+Do the following steps on a Linux computer (I recommend a debian base Linux like Ubuntu) to compile the packages.
 
 ```
 git clone https://github.com/lede-project/source
