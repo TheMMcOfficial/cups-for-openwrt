@@ -17,6 +17,7 @@ or here for the newer version: https://github.com/syb999/openwrt-musl-cups https
 
 
 Do the following steps on a Linux computer (I recommend a debian base Linux like Ubuntu) to compile the packages.
+Check the dependencies before try to compile: https://openwrt.org/docs/guide-developer/quickstart-build-images
 
 ```
 git clone https://github.com/lede-project/source
