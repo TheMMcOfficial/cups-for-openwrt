@@ -98,7 +98,7 @@ If you got the compiled version of cups (LEDE) run this:
 
 You can install multiple packages at the same time.
 
-You will maybe have to install avahi-demon too.
+You need to install avahi-demon too.
 
 opkg install avahi-daemon
 
